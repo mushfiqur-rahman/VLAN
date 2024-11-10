@@ -1,15 +1,18 @@
 # VLAN configuration
+
 Virtual Local Area Networks (VLAN)
 ![VLAN](https://user-images.githubusercontent.com/26889268/148002683-8befb9f7-3117-4ade-9c8b-abf35ec87eb7.png)
 
 ## Let's start
 
-***After opening packate tracer we need to complete a design like the image.***
+**_After opening packate tracer we need to complete a design like the image._**
 
-### For switch 0 and 1
-```Switch>enab  
-Switch>enable 
-Switch#conf t  
+### For switch, port 0 and 1
+
+````
+Switch>enab
+Switch>enable
+Switch#conf t
 Enter configuration commands, one per line.  End with CNTL/Z.
 Switch(config)#
 Switch(config)#vl
@@ -69,7 +72,7 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Switch(config)#interface range fa 0/1-8
 Switch(config-if-range)#sw
 Switch(config-if-range)#switchport mode acc
-Switch(config-if-range)#switchport mode access 
+Switch(config-if-range)#switchport mode access
 Switch(config-if-range)#end
 Switch#
 %SYS-5-CONFIG_I: Configured from console by console
@@ -99,7 +102,7 @@ Switch#
 %SYS-5-CONFIG_I: Configured from console by console
 
 Switch#show vlan bri
-Switch#show vlan brief 
+Switch#show vlan brief
 
 VLAN Name                             Status    Ports
 ---- -------------------------------- --------- -------------------------------
@@ -112,15 +115,15 @@ VLAN Name                             Status    Ports
 3    Editing                          active    Fa0/3, Fa0/4
 4    Proofing                         active    Fa0/5, Fa0/6
 5    Finishing                        active    Fa0/7, Fa0/8
-1002 fddi-default                     active    
-1003 token-ring-default               active    
-1004 fddinet-default                  active    
-1005 trnet-default                    active    
+1002 fddi-default                     active
+1003 token-ring-default               active
+1004 fddinet-default                  active
+1005 trnet-default                    active
 
 
 Switch#sh
 Switch#show interface sw
-Switch#show interface switchport 
+Switch#show interface switchport
 Name: Fa0/1
 Switchport: Enabled
 Administrative Mode: static access
@@ -157,3 +160,4 @@ Gig0/1      1,2,3,4,5
 
 Port        Vlans in spanning tree forwarding state and not pruned
 Gig0/1      1,2,3,4,5```
+````
